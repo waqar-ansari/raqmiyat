@@ -1,49 +1,108 @@
 # React Native User Management App
 
-A simple **React Native** application demonstrating **CRUD operations**, **Redux Toolkit state management**, **local data persistence**, and basic **form handling** using **React Hook Form**.
+A simple React Native app for managing users. You can login, view users, **add new users**, **update existing users**, and **delete users**. It uses **Redux**for state management and **React Navigation** for screen navigation.
 
-This project is designed as a small demo app to showcase **React Native fundamentals**, **state management**, and **form validation**.
 
----
+
+
 
 ## Features
 
 ### User Management (CRUD)
-- Create new users
-- List all users
-- Edit user details
-- Delete users
+- **Login Screen** – A simple login form with email and password validation.
+- **Users List Screen** – Shows all users, allows searching and navigating to user details.
+- **User Details Screen** – Add or edit user details, including name, email, phone, age, and active status.
+- **Delete User** – Delete users directly from the user details screen.
+- **Form Validation** – Email, password, phone number, and name fields are validated.
+- **Persistent Storage** – Users are saved locally using AsyncStorage, so they remain after closing the app.
 
-### State Management
-- Global state management with **Redux Toolkit**
-- Users data stored in Redux slices
-- Persistent storage via **AsyncStorage**
 
-### UI & Navigation
-- Users List screen with clickable items
-- User Details/Edit screen
-- Form validation using **React Hook Form**
-- Active status toggle and multiple fields per user
 
-### Form Validation
-- Required fields: Name, Email
-- Email format validation
-- Inline error messages
-- Phone number and age validation
+
+
+### Screens
+
+- **LoginScreen**
+    - Fields: Email, Password
+    - On successful login, navigates to UsersListScreen.
+**UsersListScreen**
+    - Shows a list of users with a search bar.
+    - Displays active/inactive status with colored indicators (green = active, red = inactive).
+    - Navigate to UserDetailsScreen to add/edit a user.
+**UserDetailsScreen**
+    - Add a new user or edit an existing user.
+    - Delete a user if editing an existing one.
+    - Fields: Name, Email, Phone, Age, Active Status.
+
+
+
 
 ### Technical Stack
-- **React Native** (CLI or Expo)
-- **Redux Toolkit** for global state
-- **React Navigation** for screen navigation
-- **React Hook Form** for form handling
-- **AsyncStorage** for local data persistence
+- **React Native** For building the mobile app
+- **TypeScript** For type safety
+- **Redux Toolkit** For managing users state
+- **React Navigation** For navigation between screens
+- **React Hook Form** For handling forms and validations
+- **AsyncStorage** For saving users data locally
+- **Hooks** Custom useDebounce for search functionality
 
----
 
-## Installation & Setup
 
-### 1. Clone the repository
 
-```bash
-git clone https://github.com/<your-username>/react-native-user-management.git
-cd react-native-user-management
+
+### Folder Structure
+
+
+└── 📁src
+    └── 📁app
+        ├── store.ts
+    └── 📁components
+        ├── FormInput.tsx
+        ├── UserForm.tsx
+    └── 📁features
+        └── 📁users
+            ├── usersSlice.ts
+    └── 📁hooks
+        ├── useDebounce.ts
+    └── 📁navigation
+        ├── AppNavigator.tsx
+    └── 📁screens
+        ├── LoginScreen.tsx
+        ├── UserDetailsScreen.tsx
+        ├── UsersListScreen.tsx
+    └── 📁types
+        ├── index.ts
+    └── 📁utils
+        ├── inputValidations.ts
+        ├── storage.js
+    └── App.tsx
+
+
+
+
+## How to Run
+
+## 1. Clone the repo:
+git clone https://github.com/waqar-ansari/raqmiyat.git
+cd raqmiyat
+
+## 2. Install dependencies:
+
+npm install
+
+## 3. Run the app:
+
+npx react-native run-android
+# or
+npx react-native run-ios
+
+
+## Notes
+Default login credentials are set as and can be logged in with any email and password:
+Email: waqar@raqmiyat.com
+Password: asdfgh
+
+
+###  If you have any query regarding the project kindly contact on
+
+**waqar.78692@yahoo.com**
