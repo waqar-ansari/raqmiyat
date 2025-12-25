@@ -14,6 +14,7 @@ import {
   Path,
   RegisterOptions,
 } from 'react-hook-form';
+import Colors from '../theme/colors';
 
 type Props<T extends FieldValues> = {
   control: Control<T>;
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   label: {
     marginBottom: 6,
     fontSize: 14,
-    color: 'black',
+    color: Colors.black,
   },
   inputWrapper: {
     flexDirection: 'row',
@@ -93,11 +94,11 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.borderColor,
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: Colors.mainBackground,
   },
   inputWithIcon: {
     paddingRight: 40,
@@ -110,10 +111,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   inputError: {
-    borderColor: 'red',
+    borderColor: Colors.error,
   },
   error: {
-    color: 'red',
+    color: Colors.error,
     fontSize: 12,
     marginTop: 4,
   },

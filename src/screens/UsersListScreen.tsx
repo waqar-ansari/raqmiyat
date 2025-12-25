@@ -14,6 +14,7 @@ import { UserRoutes } from '../types';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { loadUsers, saveUsers } from '../utils/storage';
 import { setUsers } from '../features/users/usersSlice';
+import Colors from '../theme/colors';
 
 type Props = NativeStackScreenProps<UserRoutes, 'Users'>;
 
@@ -99,17 +100,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#F5F7FA',
+    backgroundColor: Colors.mainBackground,
   },
   list: {
     paddingBottom: 20,
   },
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     padding: 16,
     borderRadius: 12,
     marginBottom: 12,
-    shadowColor: '#000',
+    shadowColor: Colors.black,
     shadowOpacity: 0.05,
     shadowOffset: { width: 0, height: 1 },
     shadowRadius: 2,
@@ -119,17 +120,17 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#090808ff',
+    color: Colors.black,
   },
   subText: {
     marginTop: 4,
     fontSize: 14,
-    color: '#5e5e5eff',
+    color: Colors.textNotFound,
   },
   emptyText: {
     textAlign: 'center',
     marginTop: 50,
-    color: '#5e5e5eff',
+    color: Colors.textNotFound,
     fontSize: 16,
   },
   header: {
@@ -140,29 +141,29 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     padding: 12,
     borderRadius: 12,
     fontSize: 16,
     marginRight: 10,
-    shadowColor: '#000',
+    shadowColor: Colors.black,
     shadowOpacity: 0.1,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
     elevation: 2,
   },
   addButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.success,
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 12,
   },
   addButtonText: {
-    color: '#fff',
+    color: Colors.white,
     fontWeight: '600',
   },
   activeStyle: {
-    backgroundColor: 'red',
+    backgroundColor: Colors.error,
     height: 10,
     width: 10,
     borderRadius: 5,
@@ -171,7 +172,7 @@ const styles = StyleSheet.create({
     right: 10,
   },
   deactiveStyle: {
-    backgroundColor: 'green',
+    backgroundColor: Colors.success,
     height: 10,
     width: 10,
     borderRadius: 5,

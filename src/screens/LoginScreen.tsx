@@ -11,6 +11,7 @@ import { emailRules, passwordRules } from '../utils/inputValidations';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { UserRoutes } from '../types';
+import Colors from '../theme/colors';
 
 type LoginFormValues = {
   email: string;
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     justifyContent: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
   },
   title: {
     fontSize: 28,
@@ -82,14 +83,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   loginButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.primary,
     paddingVertical: 12,
     paddingHorizontal: 16,
     borderRadius: 12,
   },
   loginButtonText: {
-    color: '#fff',
-    fontWeight: '600',
+    color: Colors.white,
+    fontWeight: 'bold',
     textAlign: 'center',
   },
 });

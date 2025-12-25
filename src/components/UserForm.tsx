@@ -4,6 +4,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { User } from '../types';
 import { FormInput } from './FormInput';
 import { emailRules, nameRules, phoneNumberRules } from '../utils/inputValidations';
+import Colors from '../theme/colors';
 
 type Props = {
   defaultValues: Omit<User, 'id'>;
@@ -87,10 +88,10 @@ export default UserForm;
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     borderRadius: 12,
     margin: 20,
-    shadowColor: 'black',
+    shadowColor: Colors.black,
     shadowOpacity: 0.05,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 4,
@@ -98,12 +99,12 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: Colors.borderColor,
     borderRadius: 8,
     padding: 12,
     marginBottom: 15,
     fontSize: 16,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: Colors.mainBackground,
   },
   multiline: {
     height: 80,
@@ -120,22 +121,22 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   saveButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: Colors.success,
     paddingVertical: 12,
     borderRadius: 12,
   },
   saveButtonText: {
-    color: '#fff',
+    color: Colors.white,
     fontWeight: '600',
     textAlign: 'center',
     fontSize: 16,
   },
   inputError: {
-    borderColor: 'red',
+    borderColor: Colors.error,
   },
 
   errorText: {
-    color: 'red',
+    color: Colors.error,
     fontSize: 13,
     marginBottom: 10,
   },
